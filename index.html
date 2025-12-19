@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fiberasinet Hotspot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- BRAND -->
+  <div class="brand">
+    <img src="logo.png" alt="Fiberasinet Logo">
+    <h1>FIBERASINET <span>(Mitra Tahyon)</span></h1>
+    <p>Solusi Internet Keluarga</p>
+  </div>
+
+  <!-- POPUP / TOAST -->
+  <div id="toast" class="toast" style="display:none;">
+    <div id="toastText" class="toast-text">Pesan</div>
+    <div class="toast-actions">
+      <a id="toastSupport" class="toast-btn" href="#" target="_blank" rel="noopener">Hubungi Support</a>
+      <button id="toastClose" class="toast-btn ghost" type="button">Tutup</button>
+    </div>
+  </div>
+
+  <!-- ERROR DARI MIKROTIK (disembunyikan; diolah JS jadi bahasa kamu) -->
+  <div id="mtError" style="display:none;">$(error)</div>
+
+  <!-- LOGIN CARD -->
+  <div class="card">
+    <form id="loginForm" name="login" action="$(link-login-only)" method="post" autocomplete="off">
+      <input type="hidden" name="dst" value="$(link-orig)">
+      <input type="hidden" name="popup" value="true">
+      <input type="hidden" name="password" value="">
+
+      <label>Kode Voucher</label>
+      <input id="voucherInput" type="text" name="username" placeholder="Masukkan kode voucher" autofocus required>
+
+      <button class="btn btn-primary" type="submit">MASUK INTERNET</button>
+    </form>
+  </div>
+
+  <!-- BELI VOUCHER -->
+  <div class="section">
+    <div class="section-title">
+      Belum punya voucher? Beli online di sini via e-Wallet (DANA / OVO / GoPay / ShopeePay dll)
+    </div>
+
+    <!-- GRID: paket 2 kolom, dan panduan ditempatkan sejajar dengan paket 1 bulan -->
+    <div class="packages">
+      <div class="pkg">
+        <strong>6 Jam</strong>
+        Rp 2.000
+        <a class="pkg-buy" href="https://vhocer-online.chenpapoi.workers.dev" target="_blank" rel="noopener">Klik beli via e-Wallet</a>
+      </div>
+
+      <div class="pkg">
+        <strong>12 Jam</strong>
+        Rp 3.000
+        <a class="pkg-buy" href="https://vhocer-online.chenpapoi.workers.dev" target="_blank" rel="noopener">Klik beli via e-Wallet</a>
+      </div>
+
+      <div class="pkg">
+        <strong>1 Hari</strong>
+        Rp 5.000
+        <a class="pkg-buy" href="https://vhocer-online.chenpapoi.workers.dev" target="_blank" rel="noopener">Klik beli via e-Wallet</a>
+      </div>
+
+      <div class="pkg">
+        <strong>6 Hari</strong>
+        Rp 20.000
+        <a class="pkg-buy" href="https://vhocer-online.chenpapoi.workers.dev" target="_blank" rel="noopener">Klik beli via e-Wallet</a>
+      </div>
+
+      <!-- Paket 1 bulan (kiri) -->
+      <div class="pkg">
+        <strong>1 Bulan</strong>
+        Rp 50.000
+        <a class="pkg-buy" href="https://vhocer-online.chenpapoi.workers.dev" target="_blank" rel="noopener">Klik beli via e-Wallet</a>
+      </div>
+
+      <!-- Panduan (kanan sejajar paket 1 bulan) -->
+      <div class="pkg guide-card">
+        <div class="guide-title">Cara Beli Voucher Online</div>
+        <div class="guide-grid">
+          <div>
+            1. Pilih paket<br>
+            2. Isi nomor WhatsApp<br>
+            3. Bayar via QRIS/E-Wallet
+          </div>
+          <div>
+            4. Voucher dikirim ke WhatsApp<br>
+            5. Masukkan kode voucher<br>
+            6. Internet aktif
+          </div>
+        </div>
+        <div class="guide-note">Transaksi aman & terenkripsi.</div>
+      </div>
+    </div>
+
+    <!-- Support voucher dipindah ke bawah list paket -->
+    <div class="support-area">
+      <div class="support-note">Terkendala voucher? Hubungi Support Admin.</div>
+      <a class="btn btn-support" href="https://wa.me/6288291988913" target="_blank" rel="noopener">
+        Bantuan Voucher (Support)
+      </a>
+    </div>
+  </div>
+
+  <!-- PROMO WIFI -->
+  <div class="wifi">
+    <div class="wifi-title">Pasang WiFi Keluarga</div>
+    <div class="wifi-desc">
+      Tersedia paket WiFi hemat untuk keluarga mulai <b>Rp 150.000/bulan</b>.
+    </div>
+
+    <a class="btn btn-sales" href="https://wa.me/6283137341852" target="_blank" rel="noopener">
+      HUBUNGI SALES (WhatsApp)
+    </a>
+
+    <a class="wifi-link" href="https://csfiberasinet.vercel.app/" target="_blank" rel="noopener">
+      👉 Bisa lihat paket WiFi klik di sini
+    </a>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
